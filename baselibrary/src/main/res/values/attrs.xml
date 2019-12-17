@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TitleBar">
+        <attr name="titleBarTitle" format="string" />
+        <attr name="titleBarLeftImage" format="reference" />
+        <attr name="titleBarRightImage" format="reference" />
+        <attr name="titleBarBackground" format="reference" />
+        <attr name="titleBarTitleColor" format="color" />
+        <attr name="titleBarRightTxt" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TopIconLayout">
+        <attr name="bottomText" format="string" />
+        <attr name="topIcon" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="DropDownView">
+        <attr name="itemArray" format="reference" />
+        <attr name="canSelect" format="boolean" />
+    </declare-styleable>
+</resources>

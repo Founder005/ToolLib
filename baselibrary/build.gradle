@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.founder005'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //基础功能的工具类
+    api 'com.github.xuexiangjys.XUtil:xutil-core:1.1.6'
+    //附加功能的工具类
+    api 'com.github.xuexiangjys.XUtil:xutil-sub:1.1.6'
+
+    //透明状态栏
+    api 'com.jaeger.statusbarutil:library:1.5.1'
+    //glide的效果
+    api 'com.github.bumptech.glide:glide:4.10.0'
+    api 'jp.wasabeef:glide-transformations:4.1.0'
+    //webview
+    api 'com.just.agentweb:agentweb:4.0.2'
+    //超级textview
+    api 'com.github.lygttpod:SuperTextView:2.4.2'
+    //EventBus
+    api 'org.greenrobot:eventbus:3.1.1'
+    //滚轮选择器
+    api 'com.contrarywind:Android-PickerView:4.1.8'
+    //选择相册
+    api 'com.yanzhenjie:album:2.1.3'
+    //权限管理
+    api 'com.yanzhenjie:permission:2.0.3'
+    //状态栏 https://github.com/laobie/StatusBarUtil
+    api 'com.jaeger.statusbarutil:library:1.5.1'
+    //刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'  //1.0.5及以前版本的老用户升级需谨慎，API改动过大
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0'  //没有使用特殊Header，可以不加这行
+    //adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+}
